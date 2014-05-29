@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3动画潜水艇按钮</title>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<button>
+  <img class="splash" src="images/watersplash_3.svg" alt="Splash!" />
+  <img class="splash splash-2" src="images/watersplash_3.svg" alt="Splash!" />
+  <img class="sub" src="images/sublogo_16.svg" class="Submarine" />
+  <img class="submerge" src="images/submerge.svg" alt="Water" />
+  <span class="main-text"><span class="submit">新浪</span>UED</span>
+  <span class="sent-text"><span class="sent">16th ！</span></span>
+</button>
+  <script src='http://i0.sinaimg.cn/dy/js/jquery/jquery-1.7.2.min.js'></script>
+  <script>
+	$(function(){
+		var button = $('button');
+		button.click(function(e) {
+	  		e.preventDefault();
+	  		$(this).toggleClass('active');
+		});
+		$(window).resize(function(e) {
+	 		button.removeClass('active');
+		});
+	});
+  </script>
+</body>
+</html>
